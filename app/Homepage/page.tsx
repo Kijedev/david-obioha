@@ -23,7 +23,7 @@ export default function page() {
         <main className="bg-white">
             <Navbar />
 
-            <header className="lg:h-screen h-[80vh] flex flex-col justify-center px-4 sm:px-6 md:px-10 lg:px-20 pt-10 text-white overflow-hidden">
+            <header className="lg:h-screen h-[100vh] flex flex-col justify-center px-4 sm:px-6 md:px-10 lg:px-20 pt-10 text-white overflow-hidden">
 
                 <div className="relative w-full max-w-[1400px] mx-auto px-4 py-20 flex justify-center items-center">
 
@@ -63,7 +63,7 @@ export default function page() {
                         initial={{ opacity: 0, y: 60 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className="text-[#060A15] font-bold text-center leading-[0.9] tracking-[-0.04em] text-[clamp(2.5rem,8vw,8rem)]"
+                        className="text-[#060A15] font-bold text-center leading-[0.9] tracking-[-0.04em] text-[clamp(3.3rem,8vw,8rem)]"
                     >
                         OBIOHA IKECHUKWU DAVID
                     </motion.h1>
@@ -91,7 +91,25 @@ export default function page() {
                     </button>
 
                     <div className="flex gap-4 text-xl sm:text-2xl">
-                        {/* Icons remain same */}
+                        <div className="flex gap-4 text-xl sm:text-2xl">
+                            <Link href="https://www.linkedin.com/in/obioha-david-878743235" target="_blank">
+                                <span className="h-12 w-12 text-2xl text-[#060A15] p-1 rounded-full bg-black/10 flex items-center justify-center hover:bg-black/20 transition">
+                                    <TiSocialLinkedin />
+                                </span>
+                            </Link>
+
+                            <a href="https://wa.me/2347054075547" target="_blank">
+                                <span className="h-12 w-12 text-2xl text-[#060A15] p-1 rounded-full bg-black/10 flex items-center justify-center hover:bg-black/20 transition">
+                                    <FaWhatsapp />
+                                </span>
+                            </a>
+
+                            <Link href="mailto:davidobioha268@gmail.com" target="_blank">
+                                <span className="h-12 w-12 text-2xl text-[#060A15] p-1 rounded-full bg-black/10 flex items-center justify-center hover:bg-black/20 transition">
+                                    <MdOutlineEmail />
+                                </span>
+                            </Link>
+                        </div>
                     </div>
                 </motion.div>
 

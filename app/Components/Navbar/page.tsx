@@ -97,8 +97,8 @@ export default function Page() {
                     <span className="w-6 h-0.5 bg-[#101828]"></span>
                     <span className="w-6 h-0.5 bg-[#101828]"></span>
                 </button>
-
             </nav>
+            
             {/* Overlay */}
             <div
                 className={`fixed inset-0 bg-black/80 backdrop-blur-sm z-40 transition-opacity duration-300 ${open ? "opacity-100 visible" : "opacity-0 invisible"
@@ -108,17 +108,15 @@ export default function Page() {
 
             {/* Sidebar / Drawer */}
             <div
-                className={`fixed top-0 right-0 h-full w-64 bg-[#060A15] text-white z-50 transform transition-transform duration-300 ${open ? "translate-x-0" : "translate-x-full"
+                className={`fixed top-0 right-0 h-full w-full bg-[#060A15] text-white z-50 transform transition-transform duration-300 ${open ? "translate-x-0" : "translate-x-full"
                     }`}
             >
-                {/* Header */}
                 <div className="float-right mt-10 mr-10">
-                    {/* <span className="font-bold">David Obioha</span> */}
-                    <button onClick={() => setOpen(false)}>✕</button>
+                    <button className="text-2xl" onClick={() => setOpen(false)}>✕</button>
                 </div>
 
                 {/* Menu */}
-                <ul className="flex flex-col gap-10 p-6 mt-20 text-2xl">
+                <ul className="flex flex-col gap-10 p-6 mt-20 text-2xl text-center">
                     <li>
                         <Link href="#about" onClick={() => setOpen(false)}>
                             About
@@ -136,7 +134,7 @@ export default function Page() {
                     </li>
                 </ul>
 
-                <div className="flex gap-2 text-xl sm:text-2xl mt-8 px-4">
+                <div className="flex gap-2 text-xl justify-center sm:text-2xl mt-8 px-4">
                     <Link href="https://www.linkedin.com/in/obioha-david-878743235" target="_blank">
                         <span className="h-12 w-12 text-2xl text-white p-1 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
                             <TiSocialLinkedin />
