@@ -2,6 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { TiSocialLinkedin } from "react-icons/ti";
+import { IoMdCall } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 
 export default function Page() {
     const [open, setOpen] = useState(false);
@@ -51,7 +55,7 @@ export default function Page() {
                   lg:max-w-4xl
                   px-6 py-6
                   rounded-full
-                  bg-[#fff]
+                  bg-[#fff]/80
                   shadow-sm
                 `
                             : `
@@ -70,20 +74,19 @@ export default function Page() {
             >
                 <Link
                     href="/"
-                    className="font-bold transition-all duration-500 text-[#101828] text-2xl"
+                    className="font-bold transition-all duration-500 text-[#060A15] text-2xl"
                 >
                     David Obioha
                 </Link>
                 <ul
-                    className={`hidden md:flex items-center transition-all duration-500 text-[#101828] ${isLargeScreen && scrolled
+                    className={`hidden md:flex items-center transition-all duration-500 text-[#060A15] ${isLargeScreen && scrolled
                         ? "gap-6 text-sm"
                         : "gap-8 text-base"
                         }`}
                 >
-                    <li><Link href="#">About</Link></li>
-                    <li><Link href="#">Projects</Link></li>
-                    <li><Link href="#">Work History</Link></li>
-                    <li><Link href="#">Contact</Link></li>
+                    <li><Link href="#about">About</Link></li>
+                    <li><Link href="#projects">Projects</Link></li>
+                    <li><Link href="#workhistory">Work History</Link></li>
                 </ul>
 
                 <button
@@ -109,34 +112,55 @@ export default function Page() {
                     }`}
             >
                 {/* Header */}
-                <div className="flex justify-between items-center p-4 border-b border-white/20">
-                    <span className="font-bold">David Obioha</span>
+                <div className="float-right mt-10 mr-10">
+                    {/* <span className="font-bold">David Obioha</span> */}
                     <button onClick={() => setOpen(false)}>✕</button>
                 </div>
 
                 {/* Menu */}
-                <ul className="flex flex-col gap-6 p-6">
+                <ul className="flex flex-col gap-10 p-6 mt-20 text-2xl">
                     <li>
-                        <Link href="#" onClick={() => setOpen(false)}>
+                        <Link href="#about" onClick={() => setOpen(false)}>
                             About
                         </Link>
                     </li>
                     <li>
-                        <Link href="#" onClick={() => setOpen(false)}>
+                        <Link href="#projects" onClick={() => setOpen(false)}>
                             Projects
                         </Link>
                     </li>
                     <li>
-                        <Link href="#" onClick={() => setOpen(false)}>
+                        <Link href="#workhistory" onClick={() => setOpen(false)}>
                             Work History
                         </Link>
                     </li>
-                    <li>
-                        <Link href="#" onClick={() => setOpen(false)}>
-                            Contact
-                        </Link>
-                    </li>
                 </ul>
+
+                <div className="flex gap-2 text-xl sm:text-2xl mt-8 px-4">
+                    <Link href="https://www.linkedin.com/in/obioha-david-878743235" target="_blank">
+                        <span className="h-12 w-12 text-2xl text-white p-1 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
+                            <TiSocialLinkedin />
+                        </span>
+                    </Link>
+
+                    <a href="https://wa.me/2347054075547" target="_blank">
+                        <span className="h-12 w-12 text-2xl text-white p-1 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
+                            <FaWhatsapp />
+                        </span>
+                    </a>
+
+                    <Link href="https://www.linkedin.com/in/obioha-david-878743235" target="_blank">
+                        <span className="h-12 w-12 text-2xl text-white p-1 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
+                            <IoMdCall />
+                        </span>
+                    </Link>
+
+                    <Link href="https://www.linkedin.com/in/obioha-david-878743235" target="_blank">
+                        <span className="h-12 w-12 text-2xl text-white p-1 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
+                            <MdOutlineEmail />
+                        </span>
+                    </Link>
+                </div>
             </div>
 
         </div>

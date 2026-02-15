@@ -135,17 +135,17 @@ Impact & Results
   ];
 
   return (
-    <main className="min-h-screen bg-[#F8F8F8] text-white px-6 md:px-16 py-20">
-      <div className="max-w-8xl mx-auto text-left mb-16">
-        <h1 className="text-5xl font-bold text-[#0B1120]">My Projects</h1>
-        <p className="mt-4 text-[#0B1120]/70">Some of the projects i've worked on</p>
+    <main id="projects" className="min-h-screen bg-[#F8F8F8] text-white px-6 md:px-16 py-20">
+      <div className="max-w-8xl mx-auto lg:text-right mb-16">
+        <h1 className="lg:text-6xl text-5xl font-bold text-[#060A15]">Projects</h1>
+        <p className="mt-4 text-[#060A15]/70">Some of the projects i've worked on</p>
       </div>
 
       <div className="max-w-8xl mx-auto grid md:grid-cols-3 gap-10">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white border border-black/10 rounded-2xl overflow-hidden"
+            className="bg-white border border-[#060A15]/10 rounded-2xl overflow-hidden"
           >
             <Image
               src={project.image}
@@ -156,14 +156,14 @@ Impact & Results
             />
 
             <div className="p-6 space-y-4">
-              <h2 className="text-2xl font-semibold text-[#0B1120]">{project.title}</h2>
-              <p className="text-[#0B1120] text-md">
+              <h2 className="text-2xl font-semibold text-[#060A15]">{project.title}</h2>
+              <p className="text-[#060A15] text-md">
                 {project.shortDescription}
               </p>
 
               <button
                 onClick={() => setActiveProject(project)}
-                className="px-6 py-4 cursor-pointer rounded-lg bg-[#0B1120] hover:bg-[#0B1120]/90 transition text-sm"
+                className="px-6 py-4 cursor-pointer rounded-lg bg-[#060A15] hover:bg-[#060A15]/90 transition text-sm"
               >
                 More Details
               </button>
@@ -175,7 +175,7 @@ Impact & Results
       {activeProject && (
         <div className="fixed inset-0 z-50 overflow-hidden">
           <div
-            className="absolute inset-0 bg-white/30 backdrop-blur-lg"
+            className="absolute inset-0 bg-white/5 backdrop-blur-sm"
             onClick={() => setActiveProject(null)}
           />
 

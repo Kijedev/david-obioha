@@ -22,31 +22,31 @@ export default function page() {
                 <div>
                     <h1 className="text-white text-3xl font-bold">Get in Touch</h1>
                     <div className="flex flex-col gap-2 mt-8">
-                        <Link href="#" className="flex items-center gap-2 text-white">
+                        <div className="flex items-center gap-2 text-white">
                             <span className="h-12 w-12 text-2xl p-1 rounded-full bg-white/10 flex items-center justify-center">
                                 <MdOutlineEmail />
                             </span>
-                            <p className="text-white/50">davidobioha268@gmail.com</p>
-                        </Link>
-                        <Link href="#" className="flex items-center gap-2 text-white">
+                            <div className="text-white/50">davidobioha268@gmail.com</div>
+                        </div>
+                        <div className="flex items-center gap-2 text-white">
                             <span className="h-12 w-12 text-2xl p-1 rounded-full bg-white/10 flex items-center justify-center">
                                 <IoMdCall />
                             </span>
-                            <p className="text-white/50">+234 705 407 5547</p>
-                        </Link>
+                            <div className="text-white/50">+234 705 407 5547</div>
+                        </div>
                     </div>
                     <div className="flex gap-4 text-xl sm:text-2xl mt-8">
-                        <Link href="https://www.linkedin.com/in/david-obioha-07092002/" target="_blank">
+                        <Link href="https://www.linkedin.com/in/obioha-david-878743235" target="_blank">
                             <span className="h-12 w-12 text-2xl text-white p-1 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
                                 <TiSocialLinkedin />
                             </span>
                         </Link>
 
-                        <Link href="https://wa.me/2348104678668" target="_blank">
+                        <a href="https://wa.me/2347054075547" target="_blank">
                             <span className="h-12 w-12 text-2xl text-white p-1 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
                                 <FaWhatsapp />
                             </span>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </main>
@@ -56,7 +56,7 @@ export default function page() {
             </div>
 
             <div className="mt-10">
-                <p className="text-white/30 text-sm text-center">© 2025 David Obioha. All rights reserved.</p>
+                <p className="text-white/30 text-sm text-center">© 2026 David Obioha. All rights reserved.</p>
             </div>
         </section>
     );
