@@ -148,18 +148,6 @@ export default function Page() {
                             <FaWhatsapp />
                         </span>
                     </a>
-
-                    <Link href="https://www.linkedin.com/in/obioha-david-878743235" target="_blank">
-                        <span className="h-12 w-12 text-2xl text-white p-1 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
-                            <IoMdCall />
-                        </span>
-                    </Link>
-
-                    <Link href="https://www.linkedin.com/in/obioha-david-878743235" target="_blank">
-                        <span className="h-12 w-12 text-2xl text-white p-1 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
-                            <MdOutlineEmail />
-                        </span>
-                    </Link>
                 </div>
             </div>
 

@@ -5,10 +5,6 @@ import { IoMdCall } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 
-export const metadata: Metadata = {
-    title: "",
-    description: "",
-};
 
 export default function page() {
     return (

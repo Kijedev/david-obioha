@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Page() {
   const [activeProject, setActiveProject] = useState<any>(null);
@@ -136,16 +137,46 @@ Impact & Results
 
   return (
     <main id="projects" className="min-h-screen bg-[#F8F8F8] text-white px-6 md:px-16 py-20">
-      <div className="max-w-8xl mx-auto lg:text-right mb-16">
-        <h1 className="lg:text-6xl text-5xl font-bold text-[#060A15]">Projects</h1>
-        <p className="mt-4 text-[#060A15]/70">Some of the projects i've worked on</p>
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="max-w-8xl mx-auto lg:text-right mb-16"
+      >
+        <h1 className="lg:text-6xl text-5xl font-bold text-[#060A15]">
+          Projects
+        </h1>
+        <p className="mt-4 text-[#060A15]/70">
+          Some of the projects I've worked on
+        </p>
+      </motion.div>
 
-      <div className="max-w-8xl mx-auto grid md:grid-cols-3 gap-10">
+
+      <motion.div
+        className="max-w-8xl mx-auto grid md:grid-cols-3 gap-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          visible: {
+            transition: {
+              staggerChildren: 0.2,
+            },
+          },
+        }}
+      >
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-white border border-[#060A15]/10 rounded-2xl overflow-hidden"
+            variants={{
+              hidden: { opacity: 0, y: 60 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            whileHover={{ y: -8 }}
+            className="bg-white border border-[#060A15]/10 rounded-2xl overflow-hidden shadow-sm"
           >
             <Image
               src={project.image}
@@ -156,35 +187,50 @@ Impact & Results
             />
 
             <div className="p-6 space-y-4">
-              <h2 className="text-2xl font-semibold text-[#060A15]">{project.title}</h2>
+              <h2 className="text-2xl font-semibold text-[#060A15]">
+                {project.title}
+              </h2>
               <p className="text-[#060A15] text-md">
                 {project.shortDescription}
               </p>
 
               <button
                 onClick={() => setActiveProject(project)}
-                className="px-6 py-4 cursor-pointer rounded-lg bg-[#060A15] hover:bg-[#060A15]/90 transition text-sm"
+                className="px-6 py-4 cursor-pointer rounded-lg bg-[#060A15] hover:bg-[#060A15]/90 transition text-sm text-white"
               >
                 More Details
               </button>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
-      {activeProject && (
-        <div className="fixed inset-0 z-50 overflow-hidden">
-          <div
-            className="absolute inset-0 bg-white/5 backdrop-blur-sm"
-            onClick={() => setActiveProject(null)}
-          />
 
-          <div className="absolute inset-0 flex items-center justify-center p-4">
-            <div
+      <AnimatePresence>
+        {activeProject && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            {/* Overlay */}
+            <motion.div
+              className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+              onClick={() => setActiveProject(null)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            />
+
+            {/* Modal Box */}
+            <motion.div
               onClick={(e) => e.stopPropagation()}
-              className="bg-[#060A15] text-white w-full max-w-6xl 
-                   max-h-[85vh] rounded-2xl shadow-2xl 
-                   border border-white/10 flex flex-col"
+              initial={{ opacity: 0, scale: 0.9, y: 40 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 40 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="relative bg-[#060A15] text-white w-full max-w-6xl max-h-[85vh] rounded-2xl shadow-2xl border border-white/10 flex flex-col"
             >
               <div className="flex justify-between items-center p-6 border-b border-white/10 shrink-0">
                 <h2 className="text-2xl font-semibold">
@@ -204,11 +250,11 @@ Impact & Results
                   {activeProject.fullDescription}
                 </div>
               </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-            </div>
-          </div>
-        </div>
-      )}
     </main>
   );
 }
