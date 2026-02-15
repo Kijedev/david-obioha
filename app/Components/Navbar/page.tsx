@@ -13,7 +13,6 @@ export default function Page() {
             const large = window.innerWidth >= 1024;
             setIsLargeScreen(large);
 
-            // reset when leaving large screen
             if (!large) setScrolled(false);
         };
 
@@ -52,7 +51,7 @@ export default function Page() {
                   lg:max-w-4xl
                   px-6 py-6
                   rounded-full
-                  bg-[#fff]/50
+                  bg-[#fff]
                   shadow-sm
                 `
                             : `
@@ -69,17 +68,12 @@ export default function Page() {
                     }
         `}
             >
-
-                {/* Logo */}
                 <Link
                     href="/"
-                    className={`font-bold transition-all duration-500 text-[#101828] ${isLargeScreen && scrolled ? "text-base" : "text-lg"
-                        }`}
+                    className="font-bold transition-all duration-500 text-[#101828] text-2xl"
                 >
-                    David <span className="text-orange-300">Obioha</span>
+                    David Obioha
                 </Link>
-
-                {/* Desktop menu */}
                 <ul
                     className={`hidden md:flex items-center transition-all duration-500 text-[#101828] ${isLargeScreen && scrolled
                         ? "gap-6 text-sm"
@@ -92,7 +86,6 @@ export default function Page() {
                     <li><Link href="#">Contact</Link></li>
                 </ul>
 
-                {/* Mobile hamburger */}
                 <button
                     onClick={() => setOpen(true)}
                     className="md:hidden flex flex-col gap-1"
@@ -103,31 +96,46 @@ export default function Page() {
                 </button>
 
             </nav>
-
-
             {/* Overlay */}
             <div
-                className={`fixed inset-0 bg-black/50 z-40 transition-opacity duration-300 ${open ? "opacity-100 visible" : "opacity-0 invisible"
+                className={`fixed inset-0 bg-black/80 backdrop-blur-sm z-40 transition-opacity duration-300 ${open ? "opacity-100 visible" : "opacity-0 invisible"
                     }`}
                 onClick={() => setOpen(false)}
             />
 
-
-            {/* Mobile sidebar */}
+            {/* Sidebar / Drawer */}
             <div
-                className={`fixed top-0 left-0 h-full w-64 bg-[#101828] text-white z-50 transform transition-transform duration-300 ${open ? "translate-x-0" : "-translate-x-full"
+                className={`fixed top-0 right-0 h-full w-64 bg-[#060A15] text-white z-50 transform transition-transform duration-300 ${open ? "translate-x-0" : "translate-x-full"
                     }`}
             >
+                {/* Header */}
                 <div className="flex justify-between items-center p-4 border-b border-white/20">
-                    <span className="font-bold">Menu</span>
+                    <span className="font-bold">David Obioha</span>
                     <button onClick={() => setOpen(false)}>✕</button>
                 </div>
 
+                {/* Menu */}
                 <ul className="flex flex-col gap-6 p-6">
-                    <li><Link href="#" onClick={() => setOpen(false)}>About</Link></li>
-                    <li><Link href="#" onClick={() => setOpen(false)}>Projects</Link></li>
-                    <li><Link href="#" onClick={() => setOpen(false)}>Work History</Link></li>
-                    <li><Link href="#" onClick={() => setOpen(false)}>Contact</Link></li>
+                    <li>
+                        <Link href="#" onClick={() => setOpen(false)}>
+                            About
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="#" onClick={() => setOpen(false)}>
+                            Projects
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="#" onClick={() => setOpen(false)}>
+                            Work History
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="#" onClick={() => setOpen(false)}>
+                            Contact
+                        </Link>
+                    </li>
                 </ul>
             </div>
 
