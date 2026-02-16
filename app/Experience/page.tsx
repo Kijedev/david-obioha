@@ -76,12 +76,12 @@ export default function Page() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={sectionAnimation}
-                className="max-w-6xl mx-auto lg:text-right"
+                className="text-center"
             >
                 <h1 className="lg:text-6xl text-5xl font-bold text-[#060A15]">
                     Experience & Training
                 </h1>
-                <p className="text-[#060A15]/70 text-lg mt-6 max-w-2xl lg:ml-auto">
+                <p className="text-[#060A15]/70 text-lg mt-6 text-center">
                     Projects, professional experience, trainings, and education that
                     shape my data analytics journey.
                 </p>

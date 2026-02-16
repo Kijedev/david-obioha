@@ -34,7 +34,7 @@ export default function SkillsSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true }}
-                    className="text-left"
+                    className="text-center"
                 >
                     <h2 className="text-5xl lg:text-6xl font-bold text-white mb-2">
                         Skills & Tools

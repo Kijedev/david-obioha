@@ -142,7 +142,7 @@ Impact & Results
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="max-w-8xl mx-auto lg:text-right mb-16"
+        className="max-w-8xl mx-auto text-center mb-16"
       >
         <h1 className="lg:text-6xl text-5xl font-bold text-[#060A15]">
           Projects

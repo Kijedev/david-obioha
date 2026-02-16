@@ -6,17 +6,16 @@ import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import Navbar from "../Components/Navbar/page";
 import About from "../About/page";
+import AutoSplit from "../Section/GSAPS/AutoSplit/page";
 import Skills from "../Section/Skills/page";
 import Projects from "../Projects/page";
 import Experience from "../Experience/page";
+import Morphing from "../Section/GSAPS/Morphing/page";
+import GSAP from "../Section/GSAPS/FIXED SCOLLING/page";
+import HorizontalScrolling from "../Section/GSAPS/HorizontalScrolling/page";
 import Link from "next/link";
 import Footer from "../Section/Footer/page";
 import { motion } from "framer-motion";
-
-// export const metadata: Metadata = {
-//     title: "",
-//     description: "",
-// };
 
 export default function page() {
     return (
@@ -112,14 +111,17 @@ export default function page() {
                         </div>
                     </div>
                 </motion.div>
-
             </header>
 
 
-            <About />
+            {/* <About /> */}
+            <AutoSplit />
             <Projects />
             <Skills />
             <Experience />
+            {/* <Morphing /> */}
+            {/* <GSAP />
+            <HorizontalScrolling /> */}
             <Footer />
         </main>
     );
