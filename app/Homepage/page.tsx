@@ -85,9 +85,9 @@ export default function page() {
                     transition={{ delay: 1, duration: 0.8 }}
                     className="flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6 mt-6 sm:mt-8 text-[#060A15]"
                 >
-                    <button className="cursor-pointer border border-[#060A15] rounded-full px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base hover:bg-[#060A15] hover:text-white transition">
+                    <Link href="#projects" className="cursor-pointer border border-[#060A15] rounded-full px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base hover:bg-[#060A15] hover:text-white transition">
                         View My Work
-                    </button>
+                    </Link>
 
                     <div className="flex gap-4 text-xl sm:text-2xl">
                         <div className="flex gap-4 text-xl sm:text-2xl">

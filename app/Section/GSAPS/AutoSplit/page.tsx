@@ -58,7 +58,7 @@ export default function AboutSection() {
     return (
         <main id="about" className="min-h-screen bg-[#F8F8F8] text-[#060A15] px-6 md:px-20 py-20 flex flex-col gap-12">
             <div className="text-center">
-                <h1 className="text-5xl font-bold mb-4 text-[#060A15]">Know Me!</h1>
+                <h1 className="text-5xl font-bold mb-4 text-[#060A15] inline-block pl-4 border-l-4 border-[#99CAFF]">Know Me!</h1>
                 <p className="text-[#060A15]/80 text-lg">
                     Turning data into actionable insights that drive better business decisions.
                 </p>

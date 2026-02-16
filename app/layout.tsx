@@ -4,7 +4,7 @@ import SmoothScroll from "./Components/SmoothScroll/page";
 
 export const metadata: Metadata = {
   title: "David Obioha",
-  description: "David's Portfolio",
+  description: "Data Analyst",
 };
 
 export default function RootLayout({

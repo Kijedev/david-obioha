@@ -78,7 +78,7 @@ export default function Page() {
                 variants={sectionAnimation}
                 className="text-center"
             >
-                <h1 className="lg:text-6xl text-5xl font-bold text-[#060A15]">
+                <h1 className="lg:text-6xl text-5xl font-bold text-[#060A15] inline-block pl-4 border-l-4 border-[#DDB9FF]">
                     Experience & Training
                 </h1>
                 <p className="text-[#060A15]/70 text-lg mt-6 text-center">

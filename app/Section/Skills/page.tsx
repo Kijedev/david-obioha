@@ -36,7 +36,7 @@ export default function SkillsSection() {
                     viewport={{ once: true }}
                     className="text-center"
                 >
-                    <h2 className="text-5xl lg:text-6xl font-bold text-white mb-2">
+                    <h2 className="text-5xl lg:text-6xl font-bold text-white mb-2 inline-block pl-4 border-l-4 border-[#FFBF78]">
                         Skills & Tools
                     </h2>
                     <p className="text-white/60 text-lg">

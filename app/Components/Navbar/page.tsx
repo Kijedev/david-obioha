@@ -76,7 +76,7 @@ export default function Page() {
                     href="/"
                     className="font-bold transition-all duration-500 text-[#060A15] text-2xl"
                 >
-                    David Obioha
+                    David O.
                 </Link>
                 <ul
                     className={`hidden md:flex items-center transition-all duration-500 text-[#060A15] ${isLargeScreen && scrolled

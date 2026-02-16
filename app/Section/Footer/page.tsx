@@ -11,7 +11,7 @@ export default function page() {
         <section className="bg-[#060A15] flex flex-col justify-center pt-10 lg:pt-32 pb-10">
             <main className="flex justify-between lg:flex-row flex-col gap-10 px-4 sm:px-6 md:px-10 lg:px-20">
                 <div className="flex flex-col gap-2">
-                    <h1 className="text-white text-3xl font-bold">David Obioha</h1>
+                    <h1 className="text-white text-3xl font-bold">David O.</h1>
                     <p className="text-white/50 text-lg">Data Analyst</p>
                 </div>
 

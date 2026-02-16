@@ -144,7 +144,7 @@ Impact & Results
         viewport={{ once: true }}
         className="max-w-8xl mx-auto text-center mb-16"
       >
-        <h1 className="lg:text-6xl text-5xl font-bold text-[#060A15]">
+        <h1 className="lg:text-6xl text-5xl font-bold text-[#060A15] inline-block pl-4 border-l-4 border-[#FDADD9]">
           Projects
         </h1>
         <p className="mt-4 text-[#060A15]/70">
