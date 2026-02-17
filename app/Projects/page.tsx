@@ -204,7 +204,7 @@ Recommendations
             }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             whileHover={{ y: -8 }}
-            className="bg-white border border-[#060A15]/10 rounded-sm overflow-hidden shadow-sm"
+            className="bg-white border border-[#060A15]/20 rounded-sm overflow-hidden shadow-sm"
           >
             <Image
               src={project.image}
