@@ -24,22 +24,25 @@ export default function ContactPage() {
         setLoading(true);
         setStatus("");
 
-        const res = await fetch("/.netlify/functions/sendEmail", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(form),
-        });
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json", // 🔥 important
+                },
+                body: JSON.stringify(form),
+            });
 
+            const data = await res.json();
 
-        const data = await res.json();
-
-        if (res.ok) {
-            setStatus("Thank you for your Message, I'll get back to you soon. 🎉");
-            setForm({ name: "", email: "", message: "" });
-        } else {
-            setStatus(data.error || "Something went wrong.");
+            if (res.ok) {
+                setStatus("Thank you for your message!, i'll get baack to you soon. 🎉");
+                setForm({ name: "", email: "", message: "" });
+            } else {
+                setStatus(data.error || "Something went wrong.");
+            }
+        } catch (error) {
+            setStatus("Something went wrong.");
         }
 
         setLoading(false);
@@ -47,24 +50,19 @@ export default function ContactPage() {
 
     useEffect(() => {
         if (status) {
-            const timer = setTimeout(() => {
-                setStatus("");
-            }, 3000);
-
+            const timer = setTimeout(() => setStatus(""), 3000);
             return () => clearTimeout(timer);
         }
     }, [status]);
 
-
     return (
-        <section>
-            <div className="relative">
-                {status && (
-                    <div className="absolute top-10 z-50 right-10 bg-white text-[#060A15] px-6 py-3 rounded-md shadow-sm animate-slide-in">
-                        {status}
-                    </div>
-                )}
-            </div>
+        <section className="relative min-h-screen bg-white flex items-center justify-center">
+            {status && (
+                <div className="fixed top-6 right-6 bg-white text-black px-6 py-3 rounded-md shadow-md z-50">
+                    {status}
+                </div>
+            )}
+
             <main className="min-h-screen bg-[#fff] text-black px-2 md:px-20 py-24 flex flex-col items-center justify-center">
                 <h1 className="text-4xl font-bold mb-4">Get In Touch</h1>
                 <p className="text-[#060A15]/80 mb-8 text-center max-w-xl">
@@ -76,8 +74,6 @@ export default function ContactPage() {
                     transition={{ duration: 0.8 }}
                     className="w-full max-w-2xl bg-[#F8F8F8]/5 border border-[#060A15]/10 rounded-3xl p-6 lg:p-10"
                 >
-
-
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <input
                             type="text"

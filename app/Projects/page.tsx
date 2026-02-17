@@ -131,7 +131,35 @@ Impact & Results
 • Built reusable SQL queries for recurring business needs  
 • Improved understanding of relational database structures
     `,
-      moreDetails: "/",
+      // moreDetails: "/",
+    },
+
+    {
+      image: "/Image/summary.jpeg",
+      title: "HR Summary Dashboard – Overview Purpose",
+      shortDescription:
+        "The dashboard provides a high-level view of workforce performance, employee distribution, and salary expenses.",
+      fullDescription: `
+The dashboard provides a high-level view of workforce performance, employee distribution, and salary expenses. It helps management track hiring trends, employee performance, departmental staffing, and overall organizational growth.
+Key Insights
+
+1. Total employees: 3,073
+2. Hires exceed terminations, indicating company growth.
+3. Gender distribution is relatively balanced.
+4. IT department has the highest headcount and salary expenses.
+5. Most employees fall under High performance rating.
+6. Majority of staff have 5–10 years tenure, showing workforce stability.
+
+Evaluation
+The organization demonstrates steady growth, strong performance levels, and stable employee retention. However, higher salary costs in major departments require monitoring.
+Recommendations
+
+1. Strengthen retention strategies for high performers.
+2. Monitor salary spending in large departments.
+3. Review termination trends for potential improvement.
+4. Continue investing in employee development programs.
+    `,
+      // moreDetails: "/",
     },
   ];
 
@@ -154,7 +182,7 @@ Impact & Results
 
 
       <motion.div
-        className="max-w-8xl mx-auto grid md:grid-cols-3 gap-10"
+        className="max-w-8xl mx-auto grid md:grid-cols-2 gap-10"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
