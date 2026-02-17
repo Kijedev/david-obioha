@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { NextResponse } from "next/server";
 
 export default function ContactPage() {
     const [form, setForm] = useState({
@@ -41,8 +42,12 @@ export default function ContactPage() {
             } else {
                 setStatus(data.error || "Something went wrong.");
             }
-        } catch (error) {
-            setStatus("Something went wrong.");
+        } catch (error: any) {
+            console.error("EMAIL ERROR:", error);
+            return NextResponse.json(
+                { error: error.message || "Something went wrong." },
+                { status: 500 }
+            );
         }
 
         setLoading(false);
