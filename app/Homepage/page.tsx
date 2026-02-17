@@ -16,6 +16,7 @@ import HorizontalScrolling from "../Section/GSAPS/HorizontalScrolling/page";
 import Link from "next/link";
 import Footer from "../Section/Footer/page";
 import { motion } from "framer-motion";
+import Contact from "../Contact/page";
 
 export default function page() {
     return (
@@ -115,6 +116,7 @@ export default function page() {
                 <Projects />
                 <Skills />
                 <Experience />
+                <Contact />
                 <Footer />
             </div>
         </main>
