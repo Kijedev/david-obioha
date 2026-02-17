@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "netlify/functions/sendEmail.js"  ],
   "exclude": ["node_modules"]
 }

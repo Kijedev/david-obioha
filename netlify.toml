@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/functions/*"
+  to = "/api/:splat"
+  status = 200

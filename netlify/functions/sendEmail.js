@@ -1,19 +1,20 @@
-import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+const nodemailer = require("nodemailer");
 
-export async function POST(req: Request) {
+exports.handler = async function (event) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, message } = JSON.parse(event.body);
 
     if (!name || !email || !message) {
-      return NextResponse.json(
-        { error: "All fields are required." },
-        { status: 400 }
-      );
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: "All fields are required." }),
+      };
     }
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -28,16 +29,19 @@ export async function POST(req: Request) {
         <h3>New Message</h3>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
     });
 
-    return NextResponse.json({ success: true });
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ success: true }),
+    };
   } catch (error) {
-    return NextResponse.json(
-      { error: "Something went wrong." },
-      { status: 500 }
-    );
+    console.log(error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: "Something went wrong." }),
+    };
   }
-}
+};

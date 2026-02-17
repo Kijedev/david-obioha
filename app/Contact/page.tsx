@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { section } from "framer-motion/client";
 
 export default function ContactPage() {
     const [form, setForm] = useState({
@@ -25,10 +24,14 @@ export default function ContactPage() {
         setLoading(true);
         setStatus("");
 
-        const res = await fetch("/api/contact", {
+        const res = await fetch("/.netlify/functions/sendEmail", {
             method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
             body: JSON.stringify(form),
         });
+
 
         const data = await res.json();
 
