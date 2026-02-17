@@ -47,7 +47,7 @@ export default function Page() {
         {
             degree: "B.Sc Education",
             institution:
-                "Educational Foundation, Nnamdi Azikiwe University, Awka",
+                "Nnamdi Azikiwe University, Awka",
         },
     ];
 

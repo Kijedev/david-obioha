@@ -96,7 +96,7 @@ Impact & Results
     },
 
     {
-      image: "/Image/sql.jpeg", // replace with your SQL project image
+      image: "/Image/sql.jpeg",
       title: "SQL Queries & Database Management",
       shortDescription:
         "Wrote SQL queries to extract, manipulate, and analyze data from relational databases.",
@@ -176,7 +176,7 @@ Impact & Results
             }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             whileHover={{ y: -8 }}
-            className="bg-white border border-[#060A15]/10 rounded-2xl overflow-hidden shadow-sm"
+            className="bg-white border border-[#060A15]/10 rounded-sm overflow-hidden shadow-sm"
           >
             <Image
               src={project.image}

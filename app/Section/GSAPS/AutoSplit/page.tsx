@@ -51,12 +51,11 @@ export default function AboutSection() {
         `I have also worked on validating data between SQL queries and Power BI reports, identifying discrepancies, and improving data accuracy
     through proper modeling and measure design. These experiences strengthened my analytical thinking, attention to detail, and problem-solving skills.`,
         `Beyond technical expertise, I value discipline, continuous learning, and clear communication. I enjoy collaborating with teams,
-    asking the right questions, and using data to create measurable impact.`,
-        `I am actively growing my experience and open to opportunities where I can contribute, learn, and deliver value through data.`,
+    asking the right questions, and using data to create measurable impact. I am actively growing my experience and open to opportunities where I can contribute, learn, and deliver value through data.`,
     ];
 
     return (
-        <main id="about" className="min-h-screen bg-[#F8F8F8] text-[#060A15] px-6 md:px-20 py-20 flex flex-col gap-12">
+        <main id="about" className="min-h-screen bg-[#FFFFFF] text-[#060A15] px-6 md:px-20 py-20 flex flex-col gap-12">
             <div className="text-center">
                 <h1 className="text-5xl font-bold mb-4 text-[#060A15] inline-block pl-4 border-l-4 border-[#99CAFF]">Know Me!</h1>
                 <p className="text-[#060A15]/80 text-lg">
@@ -67,7 +66,7 @@ export default function AboutSection() {
             <div className="space-y-8 max-w-7xl mx-auto">
                 {paragraphs.map((text, i) => (
                     <div key={i} className="split-container">
-                        <p className="split text-[#060A15]/80 text-base md:text-lg leading-relaxed text-center">
+                        <p className="split text-[#060A15] text-base md:text-xl leading-relaxed text-center">
                             {text}
                         </p>
                     </div>

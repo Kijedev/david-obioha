@@ -12,7 +12,20 @@ export default function page() {
             <main className="flex justify-between lg:flex-row flex-col gap-10 px-4 sm:px-6 md:px-10 lg:px-20">
                 <div className="flex flex-col gap-2">
                     <h1 className="text-white text-3xl font-bold">David O.</h1>
-                    <p className="text-white/50 text-lg">Data Analyst</p>
+                    <p className="text-white/50 text-md max-w-sm">A Data Analyst with a solid foundation in data cleaning, analysis, and visualization.</p>
+                    <div className="flex gap-4 text-xl sm:text-2xl mt-8">
+                        <Link href="https://www.linkedin.com/in/obioha-david-878743235" target="_blank">
+                            <span className="h-12 w-12 text-2xl text-white p-1 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
+                                <TiSocialLinkedin />
+                            </span>
+                        </Link>
+
+                        <a href="https://wa.me/2347054075547" target="_blank">
+                            <span className="h-12 w-12 text-2xl text-white p-1 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
+                                <FaWhatsapp />
+                            </span>
+                        </a>
+                    </div>
                 </div>
 
                 <div>
@@ -31,19 +44,7 @@ export default function page() {
                             <div className="text-white/50">+234 705 407 5547</div>
                         </div>
                     </div>
-                    <div className="flex gap-4 text-xl sm:text-2xl mt-8">
-                        <Link href="https://www.linkedin.com/in/obioha-david-878743235" target="_blank">
-                            <span className="h-12 w-12 text-2xl text-white p-1 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
-                                <TiSocialLinkedin />
-                            </span>
-                        </Link>
 
-                        <a href="https://wa.me/2347054075547" target="_blank">
-                            <span className="h-12 w-12 text-2xl text-white p-1 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition">
-                                <FaWhatsapp />
-                            </span>
-                        </a>
-                    </div>
                 </div>
             </main>
 

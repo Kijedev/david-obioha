@@ -45,7 +45,7 @@ export default function Page() {
                 className={`
           flex justify-between items-center
           text-white relative z-50
-          backdrop-blur-md
+          backdrop-blur-sm
           transition-all duration-500 ease-in-out
           mx-4 md:mx-6 lg:mx-auto
 
