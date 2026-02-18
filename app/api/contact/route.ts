@@ -1,4 +1,3 @@
-// app/api/contact/route.ts
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -12,7 +11,6 @@ export async function POST(req: Request) {
   try {
     const { name, email, message }: ContactForm = await req.json();
 
-    // Basic validation
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "All fields are required." },
@@ -29,9 +27,9 @@ export async function POST(req: Request) {
     });
 
     await transporter.sendMail({
-      from: process.env.EMAIL_USER, // your email
-      replyTo: email, // visitor email
-      to: process.env.EMAIL_USER, // receives the message
+      from: process.env.EMAIL_USER,
+      replyTo: email,
+      to: process.env.EMAIL_USER,
       subject: "New Message From Your Website",
       html: `
     <h3>New Message</h3>
@@ -46,7 +44,6 @@ export async function POST(req: Request) {
   } catch (error: any) {
     console.error("Email send error:", error);
 
-    // More descriptive error for debugging in production
     let message = "Something went wrong.";
     if (error.response) message += ` ${error.response}`;
 

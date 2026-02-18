@@ -26,7 +26,7 @@ export default function Page() {
 
   const projects = [
     {
-      image: "/Image/sales.jpeg",
+      image: "/Image/sale.jpeg",
       title: "Sales Performance & Profitability Analysis (Power BI)",
       shortDescription:
         "Analyzed sales data to evaluate revenue performance and profitability trends.",
@@ -182,7 +182,7 @@ Recommendations
 
 
       <motion.div
-        className="max-w-8xl mx-auto grid md:grid-cols-2 gap-10"
+        className="max-w-8xl mx-auto grid md:grid-cols-2 gap-10 max-w-6xl"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
